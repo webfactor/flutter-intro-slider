@@ -9,6 +9,10 @@ class Slide {
   /// Change text title at top
   String title;
 
+  // TitleIcon
+  /// Change title icon at top
+  IconData titleIcon;
+
   /// Change max number of lines title at top
   int maxLineTitle;
 
@@ -83,6 +87,7 @@ class Slide {
     // Title
     Widget widgetTitle,
     String title,
+    IconData titleIcon,
     int maxLineTitle,
     TextStyle styleTitle,
     EdgeInsets marginTitle,
@@ -121,6 +126,7 @@ class Slide {
     // Title
     this.widgetTitle = widgetTitle;
     this.title = title;
+    this.titleIcon = titleIcon;
     this.maxLineTitle = maxLineTitle;
     this.styleTitle = styleTitle;
     this.marginTitle = marginTitle;

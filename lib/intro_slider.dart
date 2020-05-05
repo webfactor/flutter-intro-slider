@@ -888,6 +888,7 @@ class IntroSliderState extends State<IntroSlider>
         renderTab(
           slides[i].widgetTitle,
           slides[i].title,
+          slides[i].titleIcon,
           slides[i].maxLineTitle,
           slides[i].styleTitle,
           slides[i].marginTitle,
@@ -922,6 +923,7 @@ class IntroSliderState extends State<IntroSlider>
     // Title
     Widget widgetTitle,
     String title,
+    IconData titleIcon,
     int maxLineTitle,
     TextStyle styleTitle,
     EdgeInsets marginTitle,
@@ -1008,9 +1010,14 @@ class IntroSliderState extends State<IntroSlider>
             Container(
               child: widgetDescription ??
                   Column(children: [
-                    Text(title ?? "", style: styleTitle ??
-                        TextStyle(color: Colors.white, fontSize: 18.0),
-                      textAlign: TextAlign.center,),
+                    Column(
+                      children: <Widget>[
+                        Icon(titleIcon),
+                        Text(title ?? "", style: styleTitle ??
+                            TextStyle(color: Colors.white, fontSize: 18.0),
+                          textAlign: TextAlign.center,),
+                      ],
+                    ),
                     Text(
                       description ?? "",
                       style: styleDescription ??
