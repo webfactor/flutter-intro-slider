@@ -989,7 +989,7 @@ class IntroSliderState extends State<IntroSlider>
               ),
             ),
       child: Container(
-        margin: EdgeInsets.only(bottom: 60.0),
+        margin: EdgeInsets.only(bottom: 40.0),
         child: ListView(
           children: <Widget>[
 
@@ -1012,7 +1012,8 @@ class IntroSliderState extends State<IntroSlider>
                   Column(children: [
                     Column(
                       children: <Widget>[
-                        titleIcon != null ? Icon(titleIcon, color: Colors.white, size: 28.0) : Opacity(opacity: 0.0, child: Icon(Icons.home, color: Colors.white, size: 28.0)),
+                        titleIcon != null ? Icon(titleIcon, color: Colors.white, size: 38.0) : Opacity(opacity: 0.0, child: Icon(Icons.home, color: Colors.white, size: 38.0)),
+                        SizedBox(height: 10,),
                         Text(title ?? "", style: styleTitle ??
                             TextStyle(color: Colors.white, fontSize: 18.0),
                           textAlign: TextAlign.center,),
