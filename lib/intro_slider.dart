@@ -990,25 +990,6 @@ class IntroSliderState extends State<IntroSlider>
         margin: EdgeInsets.only(bottom: 60.0),
         child: ListView(
           children: <Widget>[
-            Container(
-              // Title
-              child: widgetTitle ??
-                  Text(
-                    title ?? "",
-                    style: styleTitle ??
-                        TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30.0,
-                        ),
-                    maxLines: maxLineTitle != null ? maxLineTitle : 1,
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-              margin: marginTitle ??
-                  EdgeInsets.only(
-                      top: 70.0, bottom: 50.0, left: 20.0, right: 20.0),
-            ),
 
             // Image or Center widget
             GestureDetector(
@@ -1026,16 +1007,22 @@ class IntroSliderState extends State<IntroSlider>
             // Description
             Container(
               child: widgetDescription ??
-                  Text(
-                    description ?? "",
-                    style: styleDescription ??
+                  Column(children: [
+                    Text(title ?? "", style: styleTitle ??
                         TextStyle(color: Colors.white, fontSize: 18.0),
-                    textAlign: TextAlign.center,
-                    maxLines: maxLineTextDescription != null
-                        ? maxLineTextDescription
-                        : 100,
-                    overflow: TextOverflow.ellipsis,
-                  ),
+                      textAlign: TextAlign.center,),
+                    Text(
+                      description ?? "",
+                      style: styleDescription ??
+                          TextStyle(color: Colors.white, fontSize: 18.0),
+                      textAlign: TextAlign.center,
+                      maxLines: maxLineTextDescription != null
+                          ? maxLineTextDescription
+                          : 100,
+                      overflow: TextOverflow.ellipsis,
+                    )
+    ])
+                  ,
               margin: marginDescription ??
                   EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 50.0),
             ),
