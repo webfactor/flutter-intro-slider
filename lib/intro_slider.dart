@@ -1012,7 +1012,7 @@ class IntroSliderState extends State<IntroSlider>
                   Column(children: [
                     Column(
                       children: <Widget>[
-                        Icon(titleIcon),
+                        titleIcon != null ? Icon(titleIcon, color: Colors.white, size: 28.0) : Opacity(opacity: 0.0, child: Icon(Icons.home, color: Colors.white, size: 28.0)),
                         Text(title ?? "", style: styleTitle ??
                             TextStyle(color: Colors.white, fontSize: 18.0),
                           textAlign: TextAlign.center,),
