@@ -1019,6 +1019,7 @@ class IntroSliderState extends State<IntroSlider>
                           textAlign: TextAlign.center,),
                       ],
                     ),
+                    SizedBox(height: 3,),
                     Text(
                       description ?? "",
                       style: styleDescription ??
